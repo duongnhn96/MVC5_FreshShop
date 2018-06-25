@@ -1,0 +1,180 @@
+﻿@{
+    Layout = null;
+}
+
+@using WebAPP.Models;
+@{
+    FreshEntities db = new FreshEntities();
+    List<LoaiSp> Loai = (from loaisp in db.LoaiSp
+                         select loaisp).ToList();
+}
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:app_id" content="379522252443436" />
+    <meta property="fb:admins" content="100010820613834>"/>
+    <title>Fresh Shop - @ViewBag.Title</title>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" type='text/css' />
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- FB CMT -->
+    <!-- Facebook JavaScript SDK -->
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=379522252443436";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!--FB CMT-->
+
+    <!-- LEN DAU TRANG-->
+    <script type="text/javascript" >
+        jQuery(document).ready(function ($) {
+            if ($(".btn-top").length > 0) {
+                $(window).scroll(function () {
+                    var e = $(window).scrollTop();
+                    if (e > 3000) {
+                        $(".btn-top").show()
+                    } else {
+                        $(".btn-top").hide()
+                    }
+                });
+                $(".btn-top").click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    })
+                })
+            }
+        });
+    </script>
+    <!-- LEN DAU TRANG-->
+</head>
+<body>
+    <!--Navbar LOGIN-->
+  
+        @Html.Partial("LoginPartial")
+
+
+
+    <div class="thanhcongcu">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" >
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@Url.Action("Index", "HomeLayout")" style="box-shadow: -8px 10px 34px 8px rgba(0,0,0,0.75);text-shadow: 0px 14px 70px 29px rgba(0,0,0,0.75);          border-radius: 0px 200px 0px 200px; border: 3px dotted #FFFFFF;">FRESH.COM</a>
+                </div>
+      
+                <ul class="nav navbar-nav">
+
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            DANH MỤC
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+  
+                            @foreach (var item in Loai)
+                            {
+                                <li>
+                                    <a href="@Url.Action("ProductViewType","HomeLayout", new {MaLoai = item.MaLoai })">@item.TenLoai</a>
+                                </li>
+                            }
+
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("LienHe", "HomeLayout")">LIÊN HỆ</a></li>
+                    <li><a href="@Url.Action("GioiThieu", "HomeLayout")">GIỚI THIỆU</a></li>
+                </ul>
+
+    
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        @using (Html.BeginForm("KetQuaTimKiem", "TimKiem"))
+                        {
+                        <input type="text" name="TuKhoa" class="form-control" placeholder="Tìm kiếm ">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        }
+                    </div>
+
+                </form>
+               
+                <ul class="nav navbar-nav navbar-right" style="font-weight:bold;">
+                    <li><a href="@Url.Action("Index", "GioHang")"><span class="soluongSP fa fa-shopping-basket">  ( @Session["SoLuong"] )</span></a></li>
+                </ul>
+</div>
+        </nav>
+    </div>
+    <!-- END THANH NAV-->
+  
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!----start-images-slider---->
+                    @RenderSection("slider", false)
+                    <!--/slider -->
+                </div>
+            </div>
+        </div>
+
+        @RenderSection("header",false)
+
+        @RenderSection("ThongBao", false)
+        @RenderSection("DangKiThanhCong", false)
+        
+        @RenderSection("SanPhamMoi", false)
+        @RenderBody()
+        @RenderSection("PR", false)
+
+        @RenderSection("footer", false)
+
+            <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"><i class="fa fa-chevron-circle-up" aria-hidden="true" style="font-size:50px;"></i></a>
+
+
+
+  
+        <div class="top_brand">
+    
+            @* Thanh FOOTER *@
+            <div class="container-fluid">
+                <div id="header">
+
+                    <div class="col-md-6" id="footer1">
+
+                        <img src="~/Data/lgog.png" width="300" height="70" />
+                        <h6>
+                            "Với phương châm sức khỏe là vàng,thực phẩm
+                        </h6><h6> từ Fresh luôn được kiểm định an toàn</h6>
+                    </div>
+                    <div class="col-md-6" id="footer2">
+                        <h1><i class="fa fa-address-card" aria-hidden="true"> THÔNG TIN LIÊN HỆ</i></h1>
+                        <h4><i class="fa fa-mobile" aria-hidden="true"></i> 0948726712</h4>
+                        <h4><i class="fa fa-map-marker" aria-hidden="true"></i> 97 Man Thiện, Quận 9</h4>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div> @* ///Thanh FOOTER *@
+
+</body>
+</html>
+ 

@@ -1,0 +1,39 @@
+﻿@using WebAPP.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<SanPham>
+@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+    if (Session["TaiKhoan"] != null)
+    {
+        Layout = "~/Views/Shared/Login_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/IndexLaypout.cshtml";
+    }
+    
+
+}
+
+@section ThongBao{
+    <h3>@ViewBag.thongbao</h3>
+    }
+
+@section SanPhamMoi{
+    <div style="position:relative">
+        @foreach (SanPham sp in Model)
+    {
+            <div id="item">
+                <img src="@Url.Content("~/image/sanpham/"+sp.HinhAnh)" alt="Hình ảnh" />
+                <h2>@sp.TenSP</h2>
+                <a href="@Url.Action("Details", "SanPhams", new {id = sp.MaSP })"><input type="button" value="XEM CHI TIẾT" class="button" />  </a>
+
+            </div>
+        }
+
+    </div>
+}
+<div class="divTrang">
+    <div><strong> Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount</strong></div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", "HomeLayout", new { page = page, TuKhoa = ViewBag.tukhoa }))
+</div>

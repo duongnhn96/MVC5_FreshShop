@@ -1,0 +1,51 @@
+﻿@using WebAPP.Models;
+@model List<SanPham>
+@{
+    ViewBag.Title = ViewBag.TenLoai;
+    Layout = "~/Views/Shared/IndexLaypout.cshtml";
+    
+}
+
+
+@section SanPhamMoi{
+<div style="position:relative">
+
+    <div class="top_brand">
+        <center><img src="~/Data/tt1.png" /></center>
+
+    
+
+        <div class="container">
+            <div class="row">
+                @foreach (SanPham sp in Model)
+                {
+
+                    <div class="col-sm-4">
+                        <div id="item">
+                            <div class="khung">
+                                <img src="@Url.Content("~/"+sp.HinhAnh)" class="hinh">
+                                <div class="giua">
+                                    <div class="chu">
+                                        <a href="@Url.Action("ThemGioHang", "GioHang", new { maSp = sp.MaSP, url = Request.Url.ToString() })"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <h3 style="color:#c8c10d;">@sp.TenSP</h3>
+                                <h3><i class="fa fa-money" aria-hidden="true"></i> @sp.GiaBan.Value.ToString("F0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</h3>
+                                </div>
+                                <a href="@Url.Action("Details", "SanPhams", new {id = sp.MaSP })"><input type="button" value="XEM CHI TIẾT" class="button" />  </a>
+                            </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+}
+@section ThongBao{
+
+    <div class="tieude2"> @ViewBag.ThongBaoSp</div>
+}

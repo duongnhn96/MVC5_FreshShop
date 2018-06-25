@@ -1,0 +1,73 @@
+﻿@using WebAPP.Models;
+@model User
+@{
+    ViewBag.Title = "Setting";
+    Layout = "~/Views/Shared/IndexLaypout.cshtml";
+
+    //&nbsp;
+}
+
+<div class="container">
+    <div class="chitietsanpham">
+        <div class="row">
+            @using (Html.BeginForm(new { MaKH = Session["ID"] }))
+
+            {
+
+
+                <form onload="return check()">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Họ Tên </label>
+                        <div class="col-sm-4">
+                            @Html.EditorFor(Model => Model.Hoten, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(Model => Model.Hoten, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Email </label>
+                        <div class="col-sm-4">
+                           @Html.EditorFor(Model => Model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(Model => Model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Điện thoại  </label>
+                        <div class="col-sm-4">
+                         @Html.EditorFor(Model => Model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(Model => Model.DienThoai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Giới tính   </label>
+                        <div class="col-sm-4">
+                            @Html.EditorFor(Model => Model.GioiTinh, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(Model => Model.GioiTinh, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Địa chỉ   </label>
+                        <div class="col-sm-4">
+                          @Html.EditorFor(Model => Model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(Model => Model.DiaChi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5 col-sm-push-3"><i class="fa fa-leaf" aria-hidden="true"></i> Ngày sinh   </label>
+                        <div class="col-sm-4">
+                          @Html.EditorFor(Model => Model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(Model => Model.NgaySinh, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-md-push-5 ">
+                        <input type="submit" value="Cập nhật" class="button" />
+                        <button id="cancel" name="cancel" class="btn btn-default" value="1"> Hủy </button>
+                    </div>
+
+                </form>
+
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,454 @@
+/* Website template by freewebsitetemplates.com */
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+body #page {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:active {
+	background: none;
+}
+img {
+	border: none;
+}
+.btn-top {
+
+    border: medium none;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+
+    outline: medium none;
+    padding: 0;
+    position: fixed;
+    right:50px;
+    color:#ffffff;
+    z-index: 9999;
+}
+/*-------------------------------------------DUONG CSS---------------------------------------------*/
+#feature1{
+    background: #ECF0F1;
+    color:#2C3E50;
+    text-align:center;
+    padding-bottom:30px;
+}
+.top_brand {
+   background: #76b852;
+    padding:30px 0;
+}
+#feature1 .glyphicon{
+    font-size:50px;
+}
+#calltoaction .jumbotron{
+    padding:150px 0px;
+    text-align:center;
+    background: #63AFC7 url("../../Data/slide2_image.jpg") center no-repeat;
+    background-size: cover;
+    margin-bottom:0px;
+}
+
+  
+#tieude{
+
+   font-size:32px;
+   text-align:center;
+   font-weight:bold;
+
+}
+.tieude2{
+    background:#76b852;
+   color:#ffffff;
+   margin-top:0;
+   text-align:center;
+   font-size:20px;
+   font-weight:bold;
+   text-shadow: 0px 2px 2px rgba(0,0,0,2);
+ 
+
+}
+#thanhnav nav {
+    background: #c8c10d;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 200px 200px 0px 0px;
+    border-top: 2px dashed #fff2ff;
+    border-left: 2px dashed #fff2ff;
+    border-right: 2px dashed #fff2ff;
+     border-bottom: 1px dashed #fff2ff
+
+}
+.thanhcongcu nav{
+    border-radius: 0px 0px 150px 150px;
+    border-bottom: 2px dashed #fff2ff;
+    border-left: 2px dashed #fff2ff;
+    border-right: 2px dashed #fff2ff;
+    color: #ffffff;
+    background: #c8c10d;
+
+}
+.thanhcongcu nav div form:hover,thanhcongcu .navbar-inverse .navbar-brand:hover,.thanhcongcu nav div ul li:hover{
+-webkit-box-shadow: -1px 22px 53px -7px rgba(203,51,98,1);
+-moz-box-shadow: -1px 22px 53px -7px rgba(203,51,98,1);
+box-shadow: -1px 22px 53px -7px rgba(203,51,98,1);
+}
+.thanhcongcu nav div ul li span{
+    margin-top:0;
+    font-size:28px;
+    color:#ffffff;
+
+}
+    .thanhcongcu nav div ul li {
+ 
+        border-radius: 200px 0px 200px 0px;
+        border: 2px dotted #FFFFFF;
+    }
+.thanhcongcu nav div form{
+    width:310px;
+     color:#ffffff;
+}
+
+.thanhcongcu .navbar-inverse .navbar-brand,.thanhcongcu .navbar-inverse .navbar-nav>li>a{
+    color: #ffffff;
+     font-weight:bold;
+     font-size:20px;
+     text-transform: uppercase;
+    
+}
+
+.thanhcongcu .navbar-inverse .navbar-nav>li .dropdown-menu{
+    background: #c8c10d;
+}
+.thanhcongcu .navbar-inverse .navbar-nav>li>ul>li>a {
+     background: #c8c10d;
+     padding:3px;
+      text-transform: uppercase;
+      font-size:20px;
+     color:#ffffff;
+     text-align:center;
+     -webkit-box-shadow: -8px -2px 32px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: -8px -2px 32px -10px rgba(0,0,0,0.75);
+box-shadow: -8px -2px 32px -10px rgba(0,0,0,0.75);
+
+border-bottom: 2px dashed #ffffff
+}
+
+#thanhnav nav:hover {
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+  color: red;
+}
+#thanhnav nav ul li a{
+    color:white;
+}
+#thanhnav nav ul li a:hover{
+    color:white;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+}
+#thanhnav nav a{
+    color:white;
+}
+
+
+.tieude1{
+
+   color:black;
+   margin-top:0;
+   padding-top:25px;
+   text-align:center;
+   font-size:50px;
+   font-weight:bold;
+   text-shadow: 0px 0px  2px 2px rgba(0,0,0,2);
+   
+}
+
+.tieude p{
+
+   color:#ffffff;
+   margin-top:0;
+   padding:15px 0;
+   text-align:center;
+   font-size:50px;
+   font-weight:bold;
+   text-shadow: 0px 2px 2px rgba(0,0,0,2);
+   
+}
+.top_brand h2{
+    margin-top:0px;
+}
+ #calltoaction .jumbotron h3{
+        color: 	#F5F5F5;
+        text-shadow: 0px 2px 2px rgba(0,0,0,2);
+ }
+ #calltoaction .jumbotron p {
+        font-family:FontAwesome;
+        font-weight:bold;
+        color: #ffffff;
+        text-shadow: 0px 2px 2px rgba(0,0,0,2);
+}
+ #calltoaction .jumbotron .btn-feature{
+     color:#ffffff;
+     border: 1px solid #ffffff;
+ }
+ #calltoaction .jumbotron .btn-feature:hover{
+     color:#E32A62;
+ }
+
+ #item {
+
+     position: relative;
+     background: #FFFFFF;
+     width:280px;
+     height:330px;
+     margin: 0 auto 100px;
+     padding: 45px;
+     text-align: center;
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+#item h3 {
+      margin-top:8PX;
+        margin-bottom:0PX;
+}
+#item img{
+    margin-top:15px;
+    width:140px;
+    height:140px;
+    margin-left:20px
+}
+
+
+.button {
+    background-color: #E32A62;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content:center;
+    float:none;
+    margin-bottom:0;
+    margin-top:20PX;
+    border-radius: 200px 2px 200px 0px;
+    border: 3px dashed #ffffff;
+    box-shadow: 10px 9px 47px 0px rgba(0,0,0,0.75);
+}
+.khung {
+    position: relative;
+}
+
+.hinh {
+
+  display: block; /*!--block rieng dong lap-->*/
+  transition: .5s ease; /*hieu ung chuyen dong*/
+  backface-visibility: hidden;
+}
+
+.giua {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.khung:hover .hinh {
+  opacity: 0.3;
+}
+
+.khung:hover .giua {
+  opacity: 1;
+}
+
+.chu {
+  color: white;
+  font-size: 45px;
+
+}
+.chitietsanpham{
+   border-radius: 59px 59px 59px 59px;
+    -moz-border-radius: 59px 59px 59px 59px;
+    -webkit-border-radius: 59px 59px 59px 59px;
+    font-size:20px;
+    border: 2px dashed #76b852;
+    -webkit-box-shadow: -1px 13px 35px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 13px 35px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 13px 35px 0px rgba(0,0,0,0.75);
+    padding:30px 10px;
+    margin:15px 0;
+}
+#item .button:hover {
+    background-color: #c8c10d;
+    border: 7px solid #ffffff;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content:center;
+    float:none;
+    margin-bottom:0;
+    margin-top:20PX;
+    
+}
+.banner{
+    padding:350px 0px;
+    text-align:center;
+    background: #63AFC7 url("../../Data/banner.jpg")  center no-repeat;
+    background-size: cover;
+    margin-bottom:0px;
+}
+
+.baoquanh img {
+    margin-bottom:20px;
+    margin-left:20px;
+    border: 4px solid white;
+    border-radius:21px;
+    transition: all 1s ease;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+ 
+.baoquanh img:hover {
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    
+}
+
+/*-------------------------------------------FONTS---------------------------------------------*/
+@font-face {
+	font-family: 'roboto-regular-webfont';
+	src: url('../fonts/roboto-regular-webfont.eot');
+	src: url('../fonts/roboto-regular-webfont.woff') format('woff'), url('../fonts/roboto-regular-webfont.ttf') format('truetype'), url('../fonts/roboto-regular-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'quicksand-bold-webfont';
+	src: url('../fonts/quicksand-bold-webfont.eot');
+	src: url('../fonts/quicksand-bold-webfont.woff') format('woff'), url('../fonts/quicksand-bold-webfont.ttf') format('truetype'), url('../fonts/quicksand-bold-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'magra-bold-webfont';
+	src: url('../fonts/magra-bold-webfont.eot');
+	src: url('../fonts/magra-bold-webfont.woff') format('woff'), url('../fonts/magra-bold-webfont.ttf') format('truetype'), url('../fonts/magra-bold-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'lato-regular-webfont';
+	src: url('../fonts/lato-regular-webfont.eot');
+	src: url('../fonts/lato-regular-webfont.woff') format('woff'), url('../fonts/lato-regular-webfont.ttf') format('truetype'), url('../fonts/lato-regular-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'lato-bold-webfont';
+	src: url('../fonts/lato-bold-webfont.eot');
+	src: url('../fonts/lato-bold-webfont.woff') format('woff'), url('../fonts/lato-bold-webfont.ttf') format('truetype'), url('../fonts/lato-bold-webfont.svg') format('svg');
+}
+/*----------------------------------------header-styles---------------------------------------*/
+#header {
+	background-color: #eeebec;
+	padding: 0;
+	position: relative;
+    -webkit-box-shadow: -13px -11px 63px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -13px -11px 63px 9px rgba(0,0,0,0.75);
+    box-shadow: -13px -11px 63px 9px rgba(0,0,0,0.75);
+    text-align:center;
+}
+#header div {
+    background-color: #eeebec;
+}
+#footer1{
+    border-radius: 0px 200px 0px 200px;
+-moz-border-radius: 0px 200px 0px 200px;
+-webkit-border-radius: 0px 200px 0px 200px;
+border: 7px inset #76b852;
+}
+#footer2{
+border-radius: 200px 0px 200px 0px;
+-moz-border-radius: 200px 0px 200px 0px;
+-webkit-border-radius: 200px 0px 200px 0px;
+border: 7px outset #76b852;
+}
+
+.itemTr {
+    /*font-weight:normal;*/
+    font-family:Arial;
+    font-style:normal;
+}
+.tablecart tr:hover{background-color:#f5f5f5}
+
+.soluongSP {
+    float:right;
+    font-family:Arial;
+    text-align:center;
+    margin-top:30px;
+    font-size:16px;
+}
+/*Css div hien so trang hien tai*/
+.divTrang {
+    float:left;
+    /*position:sticky;*/
+    padding-bottom:0;
+    width:1600px;
+}
+.divTrang div{
+display:inline;
+}
+
+.active{
+    margin:2px 5px 2px 1px;
+}
+/*css thanh serch thông tin*/
+.seachIconDiv {
+    float:left;
+    margin-left: 29px;
+    height:20px;
+    width:300px;
+    margin-top: -10px;
+    padding:0 0 0 0 ;
+    position:relative;
+    background:none;
+    display:block;
+}
+.seachIconDiv button{
+    width:30px;
+    height:30px;
+    border:none;
+    background:none;
+}
+.seachIconDiv button img {
+    width:30px;
+    height:33px;
+    
+    float:left;
+    margin-left:-4px;
+    margin-top:-2px;
+    display:block;
+}
+.seachIconDiv span input{
+    height:25px;
+    width:200px;
+    float:left;display:block;
+}
+.seachIconDiv button img:hover{
+    background:#b5aaad;
+    transition: linear 1s;
+    cursor:pointer;
+}
+.inputDiv{
+    width:0;
+    height:0;
+    visibility:hidden;
+}

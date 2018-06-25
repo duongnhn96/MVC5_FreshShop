@@ -1,0 +1,61 @@
+﻿@model WebAPP.Models.SanPham
+
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/IndexLaypout.cshtml";
+    
+}
+
+<div class="container">
+    <div class="chitietsanpham">
+        <div class="row">
+            <div class="col-lg-4 col-lg-push-1">
+                <div class="baoquanh">
+                    <img src="@Url.Content("~/"+(Model.HinhAnh))" class="img-thumbnail" alt="Hình ảnh" />
+                    <div class="form-group">
+
+                        <label class="control-label col-sm-1"><a href="@Url.Action("ThemGioHang", "GioHang", new { maSp = Model.MaSP, url = Request.Url.ToString() })"><input value="THÊM VÀO GIỎ HÀNG" type="submit" class="button" /></a></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-push-1">
+                <div class="form-group">
+                    <label class="control-label col-sm-4"><i class="fa fa-leaf" aria-hidden="true"></i> Tên sản phẩm: </label>
+                    <div class="col-sm-6">
+                        <label class="control-label">@Html.DisplayFor(model => model.TenSP) </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4"><i class="fa fa-money" aria-hidden="true"></i> Giá bán: </label>
+                    <div class="col-sm-6">
+                        <label class="control-label"> @Model.GiaBan.Value.ToString("F0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label col-sm-4"><i class="fa fa-leaf" aria-hidden="true"></i> Hạn sử dụng: :</label>
+                    <div class="col-sm-6">
+                        <label class="control-label"> @Model.HanSuDung.Value.ToShortDateString() </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4"><i class="fa fa-leaf" aria-hidden="true"></i> Mô tả:</label>
+                    <div class="col-sm-6">
+                        <label class="control-label" style="font-size:11px"> @Html.DisplayFor(model => model.MoTa) </label>
+                    </div>
+                </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-12"><i class="fa fa-leaf" aria-hidden="true"></i> Ý kiến khách hàng: </label>
+                        <div>
+                            <div class="fb-comments" data-href="http://localhost:64474/SanPhams/Details/ +@Model.MaSP" data-numposts="2" data-width="300"></div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
